@@ -88,6 +88,7 @@ void StartReachabilityNotifier(cbSignature param)
 void StopReachabilityNotifier() {
 
     [inetReachability stopNotifier];
+    [inetReachability release];
 }
 
 + (instancetype)reachabilityWithHostName:(NSString *)hostName
