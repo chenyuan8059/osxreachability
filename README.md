@@ -1,4 +1,4 @@
-## osxsleep
+## osxreachability
 
 osxreachability allows to monitor a Mac's network reachability
 
