@@ -1,29 +1,31 @@
 ## osxsleep
 
-osxsleep allows to monitor macOS device's sleep state from Node.
+osxreachability allows to monitor a Mac's network reachability
 
 Example usage:
 
 ```sh
 
-  const osxsleep = require('osxsleep');
+  const reach = require('osxreachability');
    
   ...
 
-  osxsleep.OSXSleep.start(function(sleepstate){
+  reach.Reachability.start(function(state){
 
-	switch(sleepstate) {
-		case osxsleep.WILL_SLEEP:
+	switch(state) {
+
+		case reach.NOT_REACHABLE:
+			// ...
 			break;
-		case osxsleep.WILL_POWER_ON:
-			break;
-		case osxsleep.HAS_POWERED_ON:
+
+		case reach.REACHABLE_WIFI:
+			// ...
 			break;
 	}
   });
 
   ...
   
-  osxsleep.OSXSleep.stop();
+  reach.Reachability.stop();
  
 ```
