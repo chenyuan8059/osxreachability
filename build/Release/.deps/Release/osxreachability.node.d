@@ -1,1 +1,0 @@
-cmd_Release/osxreachability.node := c++ -bundle -stdlib=libc++ -undefined dynamic_lookup -Wl,-no_pie -Wl,-search_paths_first -mmacosx-version-min=10.7 -arch x86_64 -L./Release -stdlib=libc++  -o Release/osxreachability.node Release/obj.target/osxreachability/reach.o Release/obj.target/osxreachability/Reachability.o 
